@@ -74,6 +74,7 @@ def find_layouts(file):
                     key['matrix'] = matrix_locations[key['label']]
 
             parsed_layouts[macro_name] = {
+                'key_count': len(parsed_layout),
                 'layout': parsed_layout,
                 'filename': str(file),
             }

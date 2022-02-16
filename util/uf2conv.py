@@ -78,7 +78,7 @@ def convert_from_uf2(buf):
         if datalen > 476:
             assert False, "Invalid UF2 data size at " + ptr
         newaddr = hd[3]
-        if curraddr is None:
+        if curraddr == None:
             appstartaddr = newaddr
             curraddr = newaddr
         padding = newaddr - curraddr
@@ -171,7 +171,7 @@ def convert_from_hex_to_uf2(buf):
             break
         elif tp == 0:
             addr = upper | (rec[1] << 8) | rec[2]
-            if appstartaddr is None:
+            if appstartaddr == None:
                 appstartaddr = addr
             i = 4
             while i < len(rec) - 1:
@@ -215,7 +215,7 @@ def get_drives():
     def has_info(d):
         try:
             return os.path.isfile(d + INFO_FILE)
-        except Exception:
+        except:
             return False
 
     return list(filter(has_info, drives))
@@ -300,7 +300,7 @@ def main():
               (ext, len(outbuf), appstartaddr))
         if args.convert or ext != "uf2":
             drives = []
-            if args.output is None:
+            if args.output == None:
                 args.output = "flash." + ext
         else:
             drives = get_drives()
