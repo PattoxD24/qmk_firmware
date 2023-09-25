@@ -47,13 +47,14 @@ uint16_t encoder_rotated_timer;
 #define K_CPRF LGUI(LSFT(KC_M)) //  Cmd + Shift + M. Used for switching Google Chrome profiles
 #define K_MDSH LSFT(LALT(KC_MINS))
 
-// Layer Keys
+// Layer Keys<<
 #define LT_LOW LT(_LOWER, KC_ENT)
 #define LT_RAI LT(_RAISE, KC_SPC)
 
 // Mod-Tap Keys
 #define MT_DEL MT(MOD_LALT | MOD_LSFT, KC_DEL)
 #define MT_EQL MT(MOD_RSFT, KC_EQL)
+// #define MT_EQL MT(MOD_RSFT, KC_GRV)
 
 // Layout blocks
 
@@ -84,14 +85,14 @@ uint16_t encoder_rotated_timer;
 #define _____________________NUM_LEFT_______________________ T_GRV, KC_1, KC_2, KC_3, KC_4, KC_5
 #define _____________________NUM_RIGHT______________________ KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS
 
-#define _____________________FUNC_LEFT______________________ KC_F11, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5
+#define _____________________FUNC_LEFT______________________ KC_F11, KC_F1, KC_F2, KC_F3, KC_F4, T_F5
 #define _____________________FUNC_RIGHT_____________________ KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F12
 
 #define _____________________SYM_LEFT_______________________ KC_TILD, KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC
 #define _____________________SYM_RIGHT______________________ KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_UNDS
 
 #define _____________________LOWER_L1_______________________ M_XXX2, M_XXX3, _________MEDIA_1_________, K_CSCN
-#define _____________________LOWER_L2_______________________ M_XXX4, M_XXX5, _________MEDIA_2_________, XXXXXXX
+#define _____________________LOWER_L2_______________________ M_XXX4, M_XXX5, _________MEDIA_2_________, KC_NUBS
 #define _____________________LOWER_L3_______________________ KC_LSFT, M_SHFT, _________MEDIA_3_________, T_LBRC
 
 #define _____________________LOWER_R1_______________________ _______________NAV_1______________, XXXXXXX, K_MDSH
@@ -141,11 +142,11 @@ uint16_t encoder_rotated_timer;
   #define ________MOD_RIGHT________ LT_LOW, KC_BSPC, KC_LALT
 #else
   #define ________MOD_LEFT_________ KC_LALT, T_GUI, KC_LCTL
-  #define ________MOD_RIGHT________ LT_LOW, KC_BSPC, KC_LALT
+  #define ________MOD_RIGHT________ LT_LOW, KC_BSPC,
+
+
 #endif
 
 // Layout wrappers
 #define LAYOUT_wrapper(...) LAYOUT(__VA_ARGS__)
 #define LAYOUT_ergodox_wrapper(...) LAYOUT_ergodox(__VA_ARGS__)
-
-

@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define TAPPING_TERM 150
 
-#define MASTER_RIGHT
+#define MASTER_LEFT
 
 #define USE_SERIAL_PD2
 
@@ -88,3 +88,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define OLED_DISABLE_TIMEOUT
 
 #define LAYOUT LAYOUT_split_3x6_3
+
+// Disable RBG on Suspend
+#define RGB_DISABLE_WHEN_USB_SUSPENDED true
+#define RGBLIGHT_SLEEP

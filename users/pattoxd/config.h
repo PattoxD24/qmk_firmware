@@ -20,5 +20,6 @@
     #define COMBO_TERM 60
 #endif
 
-// Disable RBG on Suspend
-#define RGB_DISABLE_WHEN_USB_SUSPENDED true
+// // Disable RBG on Suspend
+// #define RGB_DISABLE_WHEN_USB_SUSPENDED
+// #define RGBLIGHT_SLEEP true
